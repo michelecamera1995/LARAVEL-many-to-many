@@ -16,6 +16,12 @@ class PostsModel extends Model
         return $this->belongsTo('App/CategoryModel');
     }
 
+    public function selectTags()
+    {
+        return $this->belongsToMany('App/TagsModel');
+    }
+
+
     public static function convertToSlug($title)
     {
         $slug = Str::slug($title);
