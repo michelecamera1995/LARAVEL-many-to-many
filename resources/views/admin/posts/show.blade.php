@@ -4,4 +4,7 @@
     <p>{{ $post->content}}</p>
     <p>{{ $categories->name}}</p>
     @endforeach
+
+
+
 </div>

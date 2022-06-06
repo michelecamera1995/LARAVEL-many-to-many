@@ -87,8 +87,9 @@ class PostController extends Controller
     {
         //
         $categories = CategoryModel::all();
+        $tags = TagsModel::all();
         if ($post) {
-            return view('admin.posts.edit', compact('post', 'categories'));
+            return view('admin.posts.edit', compact('post', 'categories', 'tags'));
         } else {
             abort(404);
         }
