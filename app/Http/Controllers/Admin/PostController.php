@@ -68,10 +68,9 @@ class PostController extends Controller
     public function show(PostsModel $post)
     {
         //
-        $posts = PostsModel::all();
         $categories = CategoryModel::find($post->category_id);
-        if ($posts) {
-            return view('admin.posts.show', compact('posts', 'categories'));
+        if ($post) {
+            return view('admin.posts.show', compact('post', 'categories'));
         } else {
             abort(404);
         }
